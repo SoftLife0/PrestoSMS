@@ -14,10 +14,11 @@ function Home() {
           <Col md={8}>
             <button className='pill-button'>
               Send SMS
+              <span className='badge'>1</span>
             </button>
             <div className='hero-title'>
-              <h1>Bulk SMS Platform </h1>
-              <p>A powerful and efficient communication tool designed to streamline the process of sending large volumes of text messages to multiple recipients simultaneously. It provides businesses, organizations, and individuals with a convenient way to engage and inform their target audiences in a timely manner.</p>
+              <h2>Bulk SMS Platform </h2>
+              <p>A powerful and efficient commuication tool designed to streamline the process of sending large volumes of text messages to multiple recipients simultaneously. It provdes business, organization and individuals with a convinent way to engage and inform their target audience in a timely manner.</p>
             </div>
           </Col>
           <Col md={4}>

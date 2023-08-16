@@ -36,6 +36,17 @@ body {
   font-weight: bold;
   transition: width 2s;
   cursor: pointer;
+  position: relative;
+}
+
+.pill-button .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
 }
 
 .elipse {
@@ -70,24 +81,23 @@ body {
   position: relative;
   background: linear-gradient();
   position: relative;
-  margin-top: 12vh;
+  margin-top: 10vh;
 }
 
 .hero-title {
   text-align: justify;
 }
 
-.hero-title h1 {
+.hero-title h2 {
   font-size: 40px;
   font-family: 'Poppins', sans serif;
   font-weight: 800;
   padding: 20px 6px;
   color: #000;
-  letter-spacing: 1px;
 }
 
 .hero-title p {
-  font-size: 17px;
+  font-size: 16px;
   margin: 0 6px;
   font-weight: 500;
 }
