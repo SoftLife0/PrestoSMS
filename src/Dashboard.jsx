@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { Container, Row } from 'react-bootstrap'
 
-function Upload() {
+function Dashboard() {
   return (
     <Container >
         <Row>
@@ -12,4 +12,4 @@ function Upload() {
   )
 }
 
-export default Upload
+export default Dashboard

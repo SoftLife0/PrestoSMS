@@ -4,6 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import sms from './assets/sms.png'
+import { Link } from 'react-router-dom';
+import Dashboard from './Dashboard';
+
 
 
 function Home() {
@@ -12,10 +15,10 @@ function Home() {
       <Container>
         <Row>
           <Col md={8}>
-            <button className='pill-button'>
-              Send SMS
-              <span className='badge'>1</span>
-            </button>
+              <Link to='/dashboard' className='pill-button'>
+                Send SMS
+                <span className='badge'>1</span>
+              </Link>
             <div className='hero-title'>
               <h2>Bulk SMS Platform </h2>
               <p>A powerful and efficient commuication tool designed to streamline the process of sending large volumes of text messages to multiple recipients simultaneously. It provdes business, organization and individuals with a convinent way to engage and inform their target audience in a timely manner.</p>
