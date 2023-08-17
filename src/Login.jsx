@@ -19,7 +19,7 @@ function App() {
                 <span style={{color: 'hsl(218, 81%, 75%)'}}>at affordable rates</span>
             </h2>
 
-            <p className='px-3' style={{color: '#fff'}}>
+            <p className='px-3' style={{color: '#fff', fontSize:'18px', fontWeight:'500'}}>
             A powerful and efficient commuication tool designed to streamline the process of sending large volumes of text messages to multiple recipients simultaneously.
             </p>
 
