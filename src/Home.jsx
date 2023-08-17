@@ -15,7 +15,7 @@ function Home() {
       <Container>
         <Row>
           <Col md={8}>
-              <Link to='/dashboard' className='pill-button'>
+              <Link to='/login' className='pill-button'>
                 Send SMS
                 <span className='badge'>1</span>
               </Link>
