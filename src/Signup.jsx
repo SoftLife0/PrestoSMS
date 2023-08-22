@@ -34,6 +34,10 @@ function App() {
             <MDBCard className='my-5 bg-glass'>
                 <MDBCardBody className='p-4'>
 
+                    <FloatingLabel controlId="floatingInput" label="Name of Organization" className="mb-3">
+                        <Form.Control type="text" placeholder="Presto Ghana" />
+                    </FloatingLabel>
+
                     <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
                         <Form.Control type="email" placeholder="name@example.com" />
                     </FloatingLabel>
@@ -42,18 +46,19 @@ function App() {
                         <Form.Control type="password" placeholder="Password" />
                     </FloatingLabel>
 
-                    <MDBBtn className='mb-4 w-100 pill-button' size='md' style={{margin: '3vh 0 0 0'}}>Login Now</MDBBtn>
+                    <MDBBtn className='mb-4 w-100 pill-button' size='md' style={{margin: '3vh 0 0 0'}}>Sign up</MDBBtn>
                     <hr style={{margin: '0'}}/>
 
                 <MDBBtn className="mb-4 w-100 pill-button" size="md" style={{backgroundColor: '#dd4b39',margin: '3vh 0 0 0' }}>
-                    <FaGooglePlusG className='mx-2'/>Sign in with google
+                    <FaGooglePlusG className='mx-2'/>Sign up with google
                 </MDBBtn>
 
                 <MDBBtn className="mb-4 w-100 pill-button" size="md" style={{backgroundColor: '#3b5998'}}>
-                    <FaFacebook className='mx-2'/>Sign in with facebook
+                    <FaFacebook className='mx-2'/>Sign up with facebook
                 </MDBBtn>
+                
+                <h6>Already have an account <Link to='/login'>Login</Link> </h6>
 
-                <h6>Create an account <Link to='/signup'>Sign Up</Link> </h6>
 
                 </MDBCardBody>
             </MDBCard>
