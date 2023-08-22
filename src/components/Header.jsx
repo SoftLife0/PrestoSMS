@@ -1,5 +1,6 @@
 import React from 'react'
-import softlife from './assets/softlife.png'
+import softlife from '../assets/softlife.png'
+import {Link} from 'react-router-dom'
 
 function Header()  {
 
@@ -8,7 +9,9 @@ function Header()  {
         <div className="header">
             <div className='sidebar-title'>
                 <div className='sidebar-brand'>
-                    <h1>Presto SMS</h1>
+                    <Link to="/">
+                        <h1>Presto SMS</h1>
+                    </Link>
                 </div>
             </div>
             

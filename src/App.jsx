@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css'
-import Home from './Home'
+import Home from './pages/Home'
 import Header from './components/Header'
-import Dashboard from './Dashboard' 
-import Login from "./Login"
-import Signup from './Signup';      
+import Dashboard from './pages/Dashboard' 
+import Login from "./pages/Login"
+import Signup from './pages/Signup';      
 
 function App() {
   return (
