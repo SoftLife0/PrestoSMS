@@ -28,28 +28,28 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
       <ul className='sidebar-list'>
         <li className='sidebar-list-item-active'>
-        <div>
-            <div className='active-header'>
-                <div className='active-content'>
-                    <BiMoney className='icon'/>
-                    Balance
+            <div>
+                <div className='active-header'>
+                    <div className='active-content'>
+                        <BiMoney className='icon'/>
+                        Balance
+                    </div>
+                    <div className='active-button'>
+                        <BiSolidDownArrowCircle onClick={toggleExpansion}/>
+                    </div>
                 </div>
-                <div className='active-button'>
-                    <BiSolidDownArrowCircle onClick={toggleExpansion}/>
-                </div>
+                {isExpanded && (
+                    <div>
+                        <h6>SMS/EMAIL</h6>
+                        <h5><b>GHC17.06</b></h5>
+                    </div>
+                )}
+                
             </div>
-            {isExpanded && (
-                <div>
-                    <h6>SMS/EMAIL</h6>
-                    <h5><b>GHC17.06</b></h5>
-                </div>
-            )}
-            
-         </div>
         </li>
         <li className='sidebar-list-item'>
             <BiSolidMessageRoundedDetail className='icon' />
-            All Year
+            Send SMS
         </li>
         <li className='sidebar-list-item'>
             <BiBookAdd className='icon' />
