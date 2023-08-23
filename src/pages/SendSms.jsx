@@ -3,7 +3,6 @@ import '../css/Dashboard.css'
 import HeaderDashboard from '../components/HeaderDashboard';
 import Sidebar from '../components/Sidebar';
 import { useState } from 'react';
-import {BiSolidMessageRoundedDetail} from 'react-icons/bi'
 
 function SendSms() {
     const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
