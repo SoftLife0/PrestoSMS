@@ -190,6 +190,19 @@ input {
   z-index: 12 !important;
 }
 
+.bottom-button {
+    position: absolute;
+    bottom: 110px; /* Adjust this value to position the logout button correctly */
+    padding: 10px 12px;
+    background: blue;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 25px;
+}
 
 /* End of Sidebar */
 
@@ -199,7 +212,7 @@ input {
   overflow-y: auto;
   padding: 20px 12px;
   color: rgba(255, 255, 255, 0.95);
-  background: #f2f2f2;
+  background: #fff;
 }
 
 .main-title {

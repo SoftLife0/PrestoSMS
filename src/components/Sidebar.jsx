@@ -1,5 +1,6 @@
 import React from 'react';
 import { BiSolidMessageRoundedDetail, BiMoney, BiFile, BiBookAdd, BiSolidImageAdd, BiSolidDownArrowCircle } from 'react-icons/bi';
+import {BsFillEnvelopeAtFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import '../css/Dashboard.css'
 import { useState } from 'react';
@@ -52,8 +53,8 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             Send SMS
         </li>
         <li className='sidebar-list-item'>
-            <BiBookAdd className='icon' />
-            Add New Year
+            <BsFillEnvelopeAtFill className='icon' />
+            Send E-Mail
         </li>
         <li className='sidebar-list-item'>
             <BiSolidImageAdd className='icon' />
@@ -64,6 +65,10 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             SMS Reports
         </li>
       </ul>
+
+      <button className='bottom-button'>
+        Contact Us
+      </button>
     </aside>
   );
 }
