@@ -10,11 +10,12 @@ function HeaderDashboard({OpenSidebar, onProfileClick, showLogout, handleLogout}
         <div className='menu-icon'>
             <BsJustify className='icon' onClick={OpenSidebar}/>
         </div>
-        <div className='header-left'>   
-        <form action="" className='d-flex'>
+        <div className='header-left'>  
+        <h6>Send SMS</h6> 
+        {/* <form action="" className='d-flex'>
             <input type="text" placeholder='Search...'/>
             <button className='pill-button'>Search</button>
-        </form>
+        </form> */}
         </div>
         <div className='header-right'>
         <div className='profile-details'>

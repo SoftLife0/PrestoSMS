@@ -1,9 +1,17 @@
 import React from 'react';
-import { BiCalendar, BiCategory, BiFile, BiBookAdd, BiSolidImageAdd } from 'react-icons/bi';
+import { BiSolidMessageRoundedDetail, BiMoney, BiFile, BiBookAdd, BiSolidImageAdd, BiSolidDownArrowCircle } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import '../css/Dashboard.css'
+import { useState } from 'react';
 
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleExpansion = () => {
+        setIsExpanded(!isExpanded);
+    };
+
+
   return (
     <aside id='sidebar' className={openSidebarToggle ? 'sidebar-responsive' : 'sidebar'}>
       <div className='sidebar-title'>
@@ -20,34 +28,40 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
       <ul className='sidebar-list'>
         <li className='sidebar-list-item-active'>
-          <Link to='/'>
-            <BiCategory className='icon' />
-            Dashboard
-          </Link>
+        <div>
+            <div className='active-header'>
+                <div className='active-content'>
+                    <BiMoney className='icon'/>
+                    Balance
+                </div>
+                <div className='active-button'>
+                    <BiSolidDownArrowCircle onClick={toggleExpansion}/>
+                </div>
+            </div>
+            {isExpanded && (
+                <div>
+                    <h6>SMS/EMAIL</h6>
+                    <h5><b>GHC17.06</b></h5>
+                </div>
+            )}
+            
+         </div>
         </li>
         <li className='sidebar-list-item'>
-          <Link to='/year'>
-            <BiCalendar className='icon' />
+            <BiSolidMessageRoundedDetail className='icon' />
             All Year
-          </Link>
         </li>
         <li className='sidebar-list-item'>
-          <Link to='/new'>
             <BiBookAdd className='icon' />
             Add New Year
-          </Link>
         </li>
         <li className='sidebar-list-item'>
-          <Link to='/csv'>
             <BiSolidImageAdd className='icon' />
             Import CSV
-          </Link>
         </li>
         <li className='sidebar-list-item'>
-          <Link to='/reports'>
             <BiFile className='icon' />
-            Reports
-          </Link>
+            SMS Reports
         </li>
       </ul>
     </aside>

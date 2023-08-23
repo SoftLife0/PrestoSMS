@@ -17,7 +17,7 @@
 }
 
 .close_icon {
-  color: red;
+  color: blue;
   margin-left: 30px;
   margin-top: 10px;
   cursor: pointer;
@@ -25,7 +25,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 380px 1fr 1fr 1fr;
+  grid-template-columns: 320px 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 3fr;
   grid-template-areas: 
     'sidebar header header header'
@@ -37,11 +37,11 @@
 .header {
   grid-area: header;
   height: 70px;
-  margin: 2vh 0;
+  margin: 1vh 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .menu-icon {
@@ -54,7 +54,10 @@ input {
   border-radius: 5px;
 }
 
-
+.header-left h6 {
+    margin-top: 20px;
+    font-size: 500;
+}
 
 /* .elipse {
   border-radius: 50%;
@@ -83,6 +86,7 @@ input {
   border-radius: 4px;
   cursor: pointer;
 }
+
 
 /* End of Header */
 
@@ -124,19 +128,17 @@ input {
 }
 
 .sidebar-list-item {
-  padding: 20px;
+  padding: 18px;
   font-size: 22px;
   font-weight: 600;
 }
 
 .sidebar-list-item-active {
   padding: 20px;
-  background-color: #992621;
+  background-color: blue;
   border-radius: 10px;
   color: #fff;
-  display: flex;
-  align-items: center;
-  margin: 13px;
+  margin: 10px 10px;
   font-size: 22px;
   font-weight: 600;
 }
@@ -149,8 +151,25 @@ input {
   cursor: pointer;
 }
 
+
+.active-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active-content {
+    display: flex;
+    align-items: center;
+}
+
+.active-button {
+    margin-left: auto;
+    cursor: pointer;
+}
+
 .sidebar-list-item a {
-  color: #ca181e;
+  color: #0437F2;
   margin: 0;
   padding-left: 6px;
   text-decoration: none;
