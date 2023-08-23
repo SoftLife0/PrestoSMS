@@ -9,7 +9,7 @@ function Header()  {
         <div className="header">
             <div className='sidebar-title'>
                 <div className='sidebar-brand'>
-                    <Link to="/">
+                    <Link to="/" style={{textDecoration: 'none' }}>
                         <h1>Presto SMS</h1>
                     </Link>
                 </div>

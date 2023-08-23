@@ -1,17 +1,20 @@
 import React from 'react'
-import '../App.css'
+import '../css/App.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import sms from '../assets/sms.png'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Header from '../components/Header'
+
 
 
 
 function Home() {
   return (
-    <main className='hero'>
-      <Container>
+    <main>
+      <Header/>
+      <Container className='hero'>
         <Row>
           <Col md={8}>
               <Link to='/login' className='pill-button'>
