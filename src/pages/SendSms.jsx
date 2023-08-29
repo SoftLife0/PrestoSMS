@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { FloatingLabel, Form } from 'react-bootstrap';
 import { BiSolidCloudUpload } from "react-icons/bi";
 import {BsFillSendCheckFill} from "react-icons/bs"
+import { Picker } from 'emoji-mart';
 
 
 
@@ -21,10 +22,16 @@ function SendSms() {
     }
 
     const [textareaContent, setTextareaContent] = useState('');
+    // const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   
     const handleTextareaChange = (event) => {
         setTextareaContent(event.target.value);
     };
+
+    // const handleEmojiSelect = (emoji) => {
+    //     setTextareaContent(textareaContent + emoji.native);
+    //     setShowEmojiPicker(false);
+    // };
 
     const [senderName, setSenderName] = useState(''); // Default sender's name
 
@@ -74,6 +81,10 @@ function SendSms() {
 
                         <FloatingLabel controlId="floatingTextarea2" label="Enter your SMS text here" style={{color:'black'}}>
                             <Form.Control as="textarea" value={textareaContent} onChange={handleTextareaChange} placeholder="Enter your SMS text here" style={{ height: '100px' }}/>
+                            {/* <button onClick={() => setShowEmojiPicker(!showEmojiPicker)}>Toggle Emoji Picker</button>
+                            {showEmojiPicker && (
+                                <Picker onSelect={handleEmojiSelect} />
+                            )}                         */}
                         </FloatingLabel>
                     </div>
                 </div>

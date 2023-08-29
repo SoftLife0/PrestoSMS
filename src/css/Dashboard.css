@@ -139,8 +139,8 @@ input {
 
 .sidebar-list-item {
   padding: 18px;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .sidebar-list-item-active {
@@ -311,7 +311,7 @@ input {
 
 .phone-screen {
   width: 350px; 
-  height: 700px; 
+  height: 600px; 
   background-image: url('../assets/phone.png');
   background-size: cover;
   background-repeat: no-repeat;
