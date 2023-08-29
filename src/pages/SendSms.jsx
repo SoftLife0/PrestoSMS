@@ -20,20 +20,19 @@ function SendSms() {
         setOpenSidebarToggle(!openSidebarToggle)
     }
 
-    const [inputText, setInputText] = useState('');
-    const [savedText, setSavedText] = useState('');
-    const [senderName, setSenderName] = useState(''); // Default sender's name
-
-    const handleInputChange = (event) => {
-        setInputText(event.target.value);
+    const [textareaContent, setTextareaContent] = useState('');
+  
+    const handleTextareaChange = (event) => {
+        setTextareaContent(event.target.value);
     };
+
+    const [senderName, setSenderName] = useState(''); // Default sender's name
 
     const handleSaveClick = () => {
         setSavedText(inputText);
     };
 
-    // Convert newline characters to <br> elements
-    const formattedText = savedText.replace(/\n/g, '<br>');
+
 
     const handleSenderNameChange = (event) => {
         setSenderName(event.target.value);
@@ -74,29 +73,32 @@ function SendSms() {
                         </FloatingLabel>
 
                         <FloatingLabel controlId="floatingTextarea2" label="Enter your SMS text here" style={{color:'black'}}>
-                            <Form.Control as="textarea" value={inputText} onChange={handleInputChange} placeholder="Enter your SMS text here" style={{ height: '100px' }}/>
+                            <Form.Control as="textarea" value={textareaContent} onChange={handleTextareaChange} placeholder="Enter your SMS text here" style={{ height: '100px' }}/>
                         </FloatingLabel>
                     </div>
                 </div>
                 
                 <button className='pill-button' onClick={handleSaveClick}>Send Message <BsFillSendCheckFill className='upload-icon' style={{fontSize: '18px'}}/></button>
             </div>
-            <div className="col-md-4 order-md-2 order-1" style={{marginBottom: '3vh'}}>
+            <div className="col-md-4 order-md-2 order-1" style={{ marginBottom: '3vh' }}>
+            <div className="phone-screen">
                 <div className="phone-view">
-                    <div className="top-nav">
-                        <div className="profile-picture">
-                            <img src={softlife} alt=""width={100}/>
-                        </div>
-                        {/* Sender's name */}
-                            <div className="sender-name text-center" style={{fontWeight: '800'}}>{senderName}</div>
+                <div className="top-nav">
+                    <div className="profile-picture">
+                    <img src={softlife} alt="" width={100} />
                     </div>
-
-                    <div className="message-container">
-                    {inputText && (
-                        <p className="phone-text" dangerouslySetInnerHTML={{ __html: formattedText }} />
-                    )}
+                    {/* Sender's name */}
+                    <div className="sender-name text-center" style={{ fontWeight: '800', color: '#000' }}>
+                    {senderName}
                     </div>
                 </div>
+                <div className="message-container">
+                {textareaContent && (
+                    <p className="phone-text" dangerouslySetInnerHTML={{ __html: textareaContent.replace(/\n/g, '<br>') }} />
+                )}
+                </div>
+                </div>
+            </div>
             </div>
 
             </div>
