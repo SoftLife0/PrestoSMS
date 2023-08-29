@@ -304,3 +304,76 @@ input {
     display: none;
   }
 }
+
+.phone-view {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 0;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column; /* Added to stack content vertically */
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.top-nav {
+  background: #0437F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.profile-picture {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.profile-picture img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.phone-text {
+  font-size: 14px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.input-container {
+  width: 100%;
+}
+
+.message-container {
+  background: #d3e7fd;
+  color: #000;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 10px 0;
+  max-width: 80%; /* Adjust this to control the width of the message */
+  align-self: flex-start; /* Aligns the message to the left */
+  position: absolute;
+  top: 100px; /* Adjust this to control the vertical position of the message */
+  left: 10px; /* Adjust this to control the horizontal position of the message */
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
