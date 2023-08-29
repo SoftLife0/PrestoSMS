@@ -2,11 +2,13 @@ import React from 'react'
  import { BsJustify } from 'react-icons/bs'
 import softlife from '../assets/softlife.png'
 import '../css/Dashboard.css'
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+
 
 function HeaderDashboard({OpenSidebar, onProfileClick, showLogout, handleLogout})  {
 
   return (
-    <header className='header'>
+    <header className='sticky-top header'>
         <div className='menu-icon'>
             <BsJustify className='icon' onClick={OpenSidebar}/>
         </div>
@@ -29,7 +31,9 @@ function HeaderDashboard({OpenSidebar, onProfileClick, showLogout, handleLogout}
         )}
             </div>
         </div>
+        
     </header>
+    
   )
 }
 

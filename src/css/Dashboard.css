@@ -48,6 +48,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  top: 0;
+  background-color: #ffffff;
+  padding: 10px;
+  z-index: 100;
 }
 
 .menu-icon {
@@ -310,7 +314,7 @@ input {
   border-radius: 10px;
   padding: 0;
   width: 300px;
-  height: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column; /* Added to stack content vertically */
   background-color: #fff;
@@ -320,10 +324,10 @@ input {
 
 .top-nav {
   background: #0437F2;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding-top: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -331,13 +335,13 @@ input {
 .profile-picture {
   width: 60px;
   height: 60px;
+  margin: 0 auto 5px auto;
   border-radius: 50%;
   overflow: hidden;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
 }
 
 .profile-picture img {
@@ -373,7 +377,32 @@ input {
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  /* border: 1px 0 #d3e7fd; */
   border-radius: 5px;
   resize: vertical;
+}
+
+.file-upload-box {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  background: #0437F2;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 13px;
+  border-radius: 5px;
+}
+
+.upload-icon {
+  margin-left: 8px;
+  font-size: 24px;
 }
