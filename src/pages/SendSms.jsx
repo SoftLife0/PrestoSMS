@@ -89,7 +89,10 @@ function SendSms() {
                     </div>
                 </div>
                 
-                <button className='pill-button' onClick={handleSaveClick}>Send Message <BsFillSendCheckFill className='upload-icon' style={{fontSize: '18px'}}/></button>
+                <div style={{marginBottom: '7vh'}}>
+                    <button className='pill-button' onClick={handleSaveClick}>Send Message <BsFillSendCheckFill className='upload-icon' style={{fontSize: '18px'}}/></button>
+                </div>
+
             </div>
             <div className="col-md-4 order-md-2 order-1" style={{ marginBottom: '3vh' }}>
             <div className="phone-screen">
