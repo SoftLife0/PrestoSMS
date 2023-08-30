@@ -6,6 +6,8 @@ import {BsFillEnvelopeAtFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import HeaderDashboard from '../components/HeaderDashboard';
 import Sidebar from '../components/Sidebar';
+import LineChart from '/src/components/LineChart.jsx';
+// import LineChart from '../components/LineChart';
 
 function Dashboard() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -35,7 +37,7 @@ function Dashboard() {
               <div>
                 <h6>Total Balance</h6>
                 <h4>GHC12.05</h4>
-                <Link>
+                <Link to="/">
                 View Transactions
                 </Link>
               </div>
@@ -49,7 +51,7 @@ function Dashboard() {
               <div>
                 <h6>Total Balance</h6>
                 <h4>GHC5.00</h4>
-                <Link>
+                <Link to="/">
                 View Transactions
                 </Link>
               </div>
@@ -57,13 +59,14 @@ function Dashboard() {
         </div>
        
 
-        {/* <div className='charts'>
+        <div className='charts'>
             <div className='main-title'>
                 <h3><b>Metrics</b></h3>
             </div>
-            <LineChartComponent/>
 
-        </div> */}
+            {/* <LineChart/> */}
+
+        </div>
       </div>  
     </main>
   )

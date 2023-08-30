@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { FloatingLabel, Form } from 'react-bootstrap';
 import { BiSolidCloudUpload } from "react-icons/bi";
 import {BsFillSendCheckFill} from "react-icons/bs"
-import { Picker } from 'emoji-mart';
+// import { Picker } from 'emoji-mart';
 
 
 
