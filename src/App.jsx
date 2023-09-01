@@ -7,6 +7,8 @@ import Login from "./pages/Login"
 import Signup from './pages/Signup';      
 import SendSms from './pages/SendSms';
 import SendEmail from './pages/SendEmail';
+import NewLogin from './pages/NewLogin';
+import NewSignup from './pages/NewSignup';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <main>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/newlogin" exact component={NewLogin} />
+          <Route path="/newsignup" exact component={NewSignup} />
           <Route path="/signup" exact component={Signup} />
           <Route path="/login" exact component={Login} />
           <Route path="/dashboard" component={Dashboard} />

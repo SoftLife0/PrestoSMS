@@ -18,8 +18,12 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  position: relative;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 100;
 }
+
+  
 
 .sidebar-brand h1 {
   color: #0000FF;
@@ -112,22 +116,14 @@ body {
 /* End of Hero */
 
 /* Login Screen */
-
-.background-radial-gradient {
-  background-color: hsl(218, 41%, 15%);
-  background-image: radial-gradient(650px circle at 0% 0%,
-      hsl(218, 41%, 35%) 15%,
-      hsl(218, 41%, 30%) 35%,
-      hsl(218, 41%, 20%) 75%,
-      hsl(218, 41%, 19%) 80%,
-      transparent 100%),
-    radial-gradient(1250px circle at 100% 100%,
-      hsl(218, 41%, 45%) 15%,
-      hsl(218, 41%, 30%) 35%,
-      hsl(218, 41%, 20%) 75%,
-      hsl(218, 41%, 19%) 80%,
-      transparent 100%);
-  height: auto;
+.inputCard{
+  /* box-shadow: 0 2px 8px 0 rgba(48, 44, 255, 0.1); */
+  border-radius: 10px;    
+  border: none;
+  padding: 20px;
+  width: 100%;
+  margin-top: 5vh;
+  box-shadow: 0 2px 8px 0 rgba(13, 10, 44, 0.06), 0 60px 80px 0 rgba(74, 58, 255, 0.02), 0 40px 50px 0 rgba(74, 58, 255, 0.05);
 }
 
 #radius-shape-1 {

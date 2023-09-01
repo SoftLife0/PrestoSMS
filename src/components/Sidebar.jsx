@@ -12,6 +12,8 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
         setIsExpanded(!isExpanded);
     };
 
+  
+
 
   return (
     <aside id='sidebar' className={openSidebarToggle ? 'sidebar-responsive' : 'sidebar'}>
@@ -31,10 +33,12 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
         <li className='sidebar-list-item-active'>
             <div>
                 <div className='active-header'>
+                      <Link to="/dashboard">
                     <div className='active-content'>
                         <BiMoney className='icon'/>
                         Balance
                     </div>
+                      </Link>
                     <div className='active-button'>
                         <BiSolidDownArrowCircle onClick={toggleExpansion}/>
                     </div>
@@ -49,10 +53,14 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             </div>
         </li>
         <li className='sidebar-list-item'>
+          <Link to="/sendsms" style={{color: '#000'}}>
             <BiSolidMessageRoundedDetail className='icon' />
             Send SMS
+          </Link>
         </li>
         <li className='sidebar-list-item'>
+          <Link to="">
+          </Link>
             <BsFillEnvelopeAtFill className='icon' />
             Send E-Mail
         </li>
