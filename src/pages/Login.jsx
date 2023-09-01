@@ -1,75 +1,46 @@
-import React from 'react';
-import { MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBCheckbox, MDBIcon } from 'mdb-react-ui-kit';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
-import { FaFacebook, FaGooglePlusG } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import React from 'react'
+import {Link} from 'react-router-dom'
 import Header from '../components/Header';
-import '../css/App.css'
 
 
-function App() {
-    return (
-        <section>
-            <Header />
-            <div className='p-5 background-radial-gradient overflow-hidden' >
-                <MDBContainer style={{ padding: '5vh 0 0 0' }}>
+function Login() {
+  return (
+    <section>
+        <Header/>
+        <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
-                    <MDBRow>
+      <div className="row" style={{ justifyContent: 'space-around', marginTop: '5vh' }}>
+        <div className="col">
+            <br />
+            <form action="" method="post">
 
-                        <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
+              <h1 className="heading" style={{ textAlign: 'center', marginTop: '1vh' }}><b>Sign in to your account</b></h1>
+              <h6 style={{ textAlign: 'center', width: '100%' }}>
+                <b>Welcome back to your Dashboard</b>
+              </h6>
 
-                            <h2 className="my-5 display-4 fw-bold ls-tight px-3" style={{ color: 'hsl(218, 81%, 95%)' }}>
-                                Send Bulk SMS<br />
-                                <span style={{ color: 'hsl(218, 81%, 75%)' }}>at affordable rates</span>
-                            </h2>
+              <div>
+                <input className="inputCard" placeholder="Enter your email" type="text"/>
+              </div>
+              <div>
+                <input className="inputCard" placeholder="Enter your password" type="password"/>
+              </div>
 
-                            <p className='px-3' style={{ color: '#fff', fontSize: '18px', fontWeight: '500' }}>
-                                A powerful and efficient commuication tool designed to streamline the process of sending large volumes of text messages to multiple recipients simultaneously.
-                            </p>
+              <br />
 
-                        </MDBCol>
+              <input className="pill-button" style={{ width: '100%', marginTop: '5vh' }} type="submit" value="Login"/>
+            </form>
 
-                        <MDBCol md='6' className='position-relative'>
+          <h6 style={{ textAlign: 'center', marginTop: '2vh', textDecoration: 'none' }}>
+            Get Onboard <Link to="/signup" style={{ textAlign: 'center', textDecoration: 'none' }}><b>Sign Up</b></Link>
+          </h6>
 
-                            <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
-                            <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
+        </div>
+      </div>
+    </div>
 
-                            <MDBCard className='my-5 bg-glass'>
-                                <MDBCardBody className='p-4'>
-
-                                    <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
-                                        <Form.Control type="email" placeholder="name@example.com" />
-                                    </FloatingLabel>
-
-                                    <FloatingLabel controlId="floatingPassword" label="Password">
-                                        <Form.Control type="password" placeholder="Password" />
-                                    </FloatingLabel>
-
-                                    <MDBBtn className='mb-4 w-100 pill-button' size='md' style={{ margin: '3vh 0 0 0' }}>Login Now</MDBBtn>
-                                    <hr style={{ margin: '0' }} />
-
-                                    <MDBBtn className="mb-4 w-100 pill-button" size="md" style={{ backgroundColor: '#dd4b39', margin: '3vh 0 0 0' }}>
-                                        <FaGooglePlusG className='mx-2' />Sign in with google
-                                    </MDBBtn>
-
-                                    <MDBBtn className="mb-4 w-100 pill-button" size="md" style={{ backgroundColor: '#3b5998' }}>
-                                        <FaFacebook className='mx-2' />Sign in with facebook
-                                    </MDBBtn>
-
-                                    <h6>Create an account <Link to='/signup'>Sign Up</Link> </h6>
-
-                                </MDBCardBody>
-                            </MDBCard>
-
-                        </MDBCol>
-
-                    </MDBRow>
-
-                </MDBContainer>
-            </div>
-        </section>
-    );
+    </section>
+  )
 }
 
-export default App;
+export default Login
