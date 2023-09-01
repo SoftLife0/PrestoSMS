@@ -11,9 +11,10 @@ function Login() {
 
       <div className="row" style={{ justifyContent: 'space-around', marginTop: '5vh' }}>
         <div className="col">
-            <br />
-            <form action="" method="post">
-
+            <br/>
+          
+            <form action="">    
+              
               <h1 className="heading" style={{ textAlign: 'center', marginTop: '1vh' }}><b>Sign in to your account</b></h1>
               <h6 style={{ textAlign: 'center', width: '100%' }}>
                 <b>Welcome back to your Dashboard</b>
@@ -28,7 +29,9 @@ function Login() {
 
               <br />
 
-              <input className="pill-button" style={{ width: '100%', marginTop: '5vh' }} type="submit" value="Login"/>
+              <Link to="/dashboard">
+                <input className="pill-button" style={{ width: '100%', marginTop: '5vh' }} type="submit" value="Login"/>
+              </Link>
             </form>
 
           <h6 style={{ textAlign: 'center', marginTop: '2vh', textDecoration: 'none' }}>
