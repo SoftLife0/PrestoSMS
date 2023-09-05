@@ -6,7 +6,9 @@ import {BsFillEnvelopeAtFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import HeaderDashboard from '../components/HeaderDashboard';
 import Sidebar from '../components/Sidebar';
-import LineChart from '../components/LineChart';
+import ApexChart from '../components/MessageChart';
+import { Line } from 'react-chartjs-2';
+
 
 // import LineChart from '../components/LineChart';
 
@@ -68,7 +70,7 @@ function Dashboard() {
               </div>
               <div>
                 <h6>Total Balance</h6>
-                <h4>GHC129.00</h4>
+                <h4>GHC129.06</h4>
                 <Link to="/">
                 View Transactions
                 </Link>
@@ -81,8 +83,9 @@ function Dashboard() {
             <div className='main-title'>
                 <h3><b>Metrics</b></h3>
             </div>
+              <h2>fyuiojk;lkhgjcfgxchvbjkhgch</h2>
 
-            {/* <LineChart /> */}
+            <ApexChart />
 
 
         </div>

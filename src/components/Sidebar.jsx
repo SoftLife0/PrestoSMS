@@ -45,8 +45,8 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
                 </div>
                 {isExpanded && (
                     <div>
-                        <h6>SMS/EMAIL</h6>
-                        <h5><b>GHC17.06</b></h5>
+                        <h6>Total Balance</h6>
+                        <h5><b>GHC129.06</b></h5>
                     </div>
                 )}
                 

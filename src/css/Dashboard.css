@@ -49,7 +49,7 @@
   justify-content: space-between;
   padding: 0 20px;
   top: 0;
-  background-color: #ffffff;
+  background: #ffffff;
   padding: 10px;
   z-index: 100;
 }
@@ -215,7 +215,8 @@ input {
   grid-area: main;
   overflow-y: auto;
   padding: 20px 12px;
-  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 10vh;
+  /* color: rgba(255, 255, 255, 0.95); */
   background: #fff;
 }
 
