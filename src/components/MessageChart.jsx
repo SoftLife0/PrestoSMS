@@ -8,8 +8,12 @@ class ApexChart extends React.Component {
     this.state = {
       series: [
         {
-          name: 'Desktops',
+          name: 'Delivered Messages',
           data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+        },
+        {
+          name: 'Unsuccessful Messages',
+          data: [5, 10, 8, 15, 12, 7, 9, 18, 5],
         },
       ],
       options: {
@@ -24,10 +28,10 @@ class ApexChart extends React.Component {
           enabled: false,
         },
         stroke: {
-          curve: 'straight',
+          curve: 'smooth', // You can use 'smooth' for smoother lines
         },
         title: {
-          text: 'Product Trends by Month',
+          text: 'Message Statistics',
           align: 'left',
         },
         grid: {
@@ -37,7 +41,7 @@ class ApexChart extends React.Component {
           },
         },
         xaxis: {
-          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+          categories: [1, 2, 3, 4, 5, 6, 7, 8, 9], // Replace with your desired numbers
         },
       },
     };
@@ -46,7 +50,7 @@ class ApexChart extends React.Component {
   render() {
     return (
       <div id="chart">
-        <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={350} />
+        <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={300} />
       </div>
     );
   }

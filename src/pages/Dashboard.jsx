@@ -80,14 +80,13 @@ function Dashboard() {
        
 
         <div className='charts'>
-            <div className='main-title'>
-                <h3><b>Metrics</b></h3>
-            </div>
-              <h2>fyuiojk;lkhgjcfgxchvbjkhgch</h2>
+          <div className='main-title'>
+              <h3><b>Metrics</b></h3>
+          </div>
 
-            <ApexChart />
+          <h2></h2>
 
-
+          <ApexChart/>
         </div>
       </div>  
     </main>
