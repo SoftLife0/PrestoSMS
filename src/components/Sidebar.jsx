@@ -36,7 +36,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
                       <Link to="/dashboard">
                     <div className='active-content'>
                         <BiMoney className='icon'/>
-                        Balance
+                        Dashboard
                     </div>
                       </Link>
                     <div className='active-button'>

@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'      
 import SendSms from './pages/SendSms'
 import SendEmail from './pages/SendEmail'
+import Csv from './pages/Csv';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/sendsms" component={SendSms} />
           <Route path="/sendemail" component={SendEmail} />
+          <Route path="/csv" component={Csv} />
         </Switch>
       </main>
     </Router>

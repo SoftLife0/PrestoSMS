@@ -25,19 +25,20 @@ function Dashboard() {
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       <div className='main-container'>
         <div className='main-title'>
-            <h3><b>My Balance</b></h3>
+            <h3><b>My Dashboard</b></h3>
             <button className='pill-button'>Top-Up</button>
         </div>
         
         <div className="main-cards">
           <div className='card'>
               <div className='card-inner-dashboard'>
-                  <h3>SMS</h3>
-                  <BiSolidMessageRoundedDetail className='card_icon'/>
+                  <h3>Delivered Message</h3>
+                  <span style={{fontSize: '22px'}}>✅ </span>
+                  {/* <BiSolidMessageRoundedDetail className='card_icon'/> */}
               </div>
               <div>
-                <h6>Total Balance</h6>
-                <h4>GHC12.05</h4>
+                <h6>Total Count</h6>
+                <h4>1293</h4>
                 <Link to="/">
                 View Transactions
                 </Link>
@@ -46,12 +47,28 @@ function Dashboard() {
 
           <div className='card'>
               <div className='card-inner-dashboard'>
-                  <h3>E-Mail</h3>
-                  <BsFillEnvelopeAtFill className='card_icon'/>
+                  <h3>UnSucessful Message</h3>
+                  <span style={{fontSize: '22px'}}>❌</span>
+                  {/* <BsFillEnvelopeAtFill className='card_icon'/> */}
+              </div>
+              <div>
+                <h6>Total Count</h6>
+                <h4>14</h4>
+                <Link to="/">
+                View Transactions
+                </Link>
+              </div>
+          </div>
+
+          <div className='card'>
+              <div className='card-inner-dashboard'>
+                  <h3>Balance </h3>
+                  <span style={{fontSize: '24px'}}> 💰</span>
+                  {/* <BsFillEnvelopeAtFill className='card_icon'/> */}
               </div>
               <div>
                 <h6>Total Balance</h6>
-                <h4>GHC5.00</h4>
+                <h4>GHC129.00</h4>
                 <Link to="/">
                 View Transactions
                 </Link>
