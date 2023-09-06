@@ -46,22 +46,42 @@ function SendSms() {
           console.log('Text Content:', textContent);
       
           // Define the API URL
-          const apiUrl = 'https://prestoghana.com/notify/sendSms';
+          const apiUrl = 'http://192.168.0.103:5000/externalsms';
       
           // Create the data object with the required parameters
           const data = {
-            phone: phoneNumber,
-            senderId: senderName, // Assuming senderName is used as senderId
-            textareaContent: textContent,
+            "phone": phoneNumber,
+            "senderId": senderName, // Assuming senderName is used as senderId
+            "textareaContent": textContent,
           };
       
-          // Make the POST request to the API
-          const response = await axios.post(apiUrl, data);
+          // Set up headers for the POST request
+          const headers = {
+            'Origin': 'http://192.168.0.114:5173',
+            'Access-Control-Allow-Origin': 'http://192.168.0.114:5173',
+            'Content-Type': 'application/json',
+            // Add any other required headers
+          };
+      
+          // Make the POST request using fetch
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(data),
+          });
+      
+          // Check if the response status is OK (200)
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+      
+          // Parse the response data as needed (assuming JSON)
+          const responseData = await response.json();
       
           // Handle the API response as needed
-          console.log('SMS sent successfully:', response.data);
+          console.log('SMS sent successfully:', responseData);
       
-          // Optionally, clear the input fields after sending
+        //   // Optionally, clear the input fields after sending
           setSenderName('');
           setPhoneNumber('');
           setTextContent('');
