@@ -46,7 +46,7 @@ function SendSms() {
           console.log('Text Content:', textContent);
       
           // Define the API URL
-          const apiUrl = 'http://192.168.0.103:5000/externalsms';
+          const apiUrl = 'https://prestoghana.com';
       
           // Create the data object with the required parameters
           const data = {
