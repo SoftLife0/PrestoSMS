@@ -13,7 +13,7 @@ function Loader() {
                 <div className="dot"></div>
                 <div className="dot"></div>
             </figure>
-            <p className="loading-text">Your transaction is been processed, Please wait...</p>
+            <p className="loading-text">Your transaction is been processed...</p>
         </div>
     </main>
   )
