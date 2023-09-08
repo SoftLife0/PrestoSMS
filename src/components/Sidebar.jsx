@@ -1,6 +1,7 @@
 import React from 'react';
 import { BiSolidMessageRoundedDetail, BiMoney, BiFile, BiBookAdd, BiSolidImageAdd, BiSolidDownArrowCircle } from 'react-icons/bi';
-import {BsFillEnvelopeAtFill} from 'react-icons/bs'
+// import {BsFillEnvelopeAtFill} from 'react-icons/bs'
+import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import '../css/Dashboard.css'
 import { useState } from 'react';
@@ -59,10 +60,10 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           </Link>
         </li>
         <li className='sidebar-list-item'>
-          <Link to="/sendemail">
+          <Link to="/topup" style={{color: '#000'}}>
+            <FaMoneyBillTrendUp className='icon' />
+            Top Up
           </Link>
-            <BsFillEnvelopeAtFill className='icon' />
-            Send E-Mail
         </li>
         <li className='sidebar-list-item'>
             <BiSolidImageAdd className='icon' />
