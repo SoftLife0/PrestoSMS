@@ -12,7 +12,7 @@ function Success() {
             <p>We are delighted to inform you that we received your payments</p>
 
             <Link to="/dashboard">
-              <button className='pill-button' style={{background: '#47c7c5'}}>Back to Homepage </button>
+              <button className='pill-button' style={{background: '#6dc747'}}>Back to Homepage </button>
             </Link>
         </div>
     </main>
