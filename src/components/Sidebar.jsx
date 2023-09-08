@@ -59,7 +59,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           </Link>
         </li>
         <li className='sidebar-list-item'>
-          <Link to="">
+          <Link to="/sendemail">
           </Link>
             <BsFillEnvelopeAtFill className='icon' />
             Send E-Mail

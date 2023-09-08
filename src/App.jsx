@@ -8,6 +8,7 @@ import Signup from './pages/Signup'
 import SendSms from './pages/SendSms'
 import SendEmail from './pages/SendEmail'
 import Csv from './pages/Csv';
+import Loader from './components/Loader';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/sendsms" component={SendSms} />
           <Route path="/sendemail" component={SendEmail} />
           <Route path="/csv" component={Csv} />
+          <Route path="/loader" component={Loader}/>
         </Switch>
       </main>
     </Router>
