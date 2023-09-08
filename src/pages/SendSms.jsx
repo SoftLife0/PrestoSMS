@@ -47,6 +47,7 @@ function SendSms() {
       
           // Define the API URL
           const apiUrl = 'https://prestoghana.com';
+          const sandboxUrl = 'http://192.168.0.111:5000/externalsms';
       
           // Create the data object with the required parameters
           const data = {
@@ -64,7 +65,7 @@ function SendSms() {
           };
       
           // Make the POST request using fetch
-          const response = await fetch(apiUrl, {
+          const response = await fetch(sandboxUrl, {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(data),
@@ -82,9 +83,9 @@ function SendSms() {
           console.log('SMS sent successfully:', responseData);
       
         //   // Optionally, clear the input fields after sending
-          setSenderName('');
-          setPhoneNumber('');
-          setTextContent('');
+          // setSenderName('');
+          // setPhoneNumber('');
+          // setTextContent('');
         } catch (error) {
           // Handle errors
           console.error('Error sending SMS:', error);

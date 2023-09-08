@@ -28,7 +28,9 @@ function Dashboard() {
       <div className='main-container'>
         <div className='main-title'>
             <h3><b>My Dashboard</b></h3>
-            <button className='pill-button'>Top-Up</button>
+            <Link to="/topup">
+              <button className='pill-button'>Top-Up</button>
+            </Link>
         </div>
         
         <div className="main-cards">

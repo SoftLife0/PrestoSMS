@@ -21,7 +21,7 @@ function Login() {
               </h6>
 
               <div>
-                <input className="inputCard" placeholder="Enter your email" type="text"/>
+                <input className="inputCard" placeholder="Enter your email" type="email"/>
               </div>
               <div>
                 <input className="inputCard" placeholder="Enter your password" type="password"/>
