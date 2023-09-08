@@ -117,6 +117,7 @@ function Topup() {
                                     <option value="MTN">MTN</option>
                                     <option value="Vodafone">Vodafone</option>
                                     <option value="AirtelTigo">AirtelTigo</option>
+                                    <option value="Glo">Glo</option>
                                 </select>
                             </div>
 
