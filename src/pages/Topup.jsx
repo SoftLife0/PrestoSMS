@@ -12,7 +12,7 @@ function Topup() {
     const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
     const [network, setNetwork] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [amount, setAmount] = useState('');
+    const [amount, setAmount] = useState('');   
 
     const OpenSidebar = () => {
         setOpenSidebarToggle(!openSidebarToggle);
@@ -111,7 +111,13 @@ function Topup() {
 
                             <div className="form-floating mb-3">
                                 <label htmlFor="" controlId="network">Network</label>
-                                <input className="inputCard" value={network} onChange={(e) => setNetwork(e.target.value)} placeholder="Choose Network" type="text"/>
+                                {/* <input className="inputCard" value={network} onChange={(e) => setNetwork(e.target.value)} placeholder="Choose Network" type="text"/> */}
+                                <select className="inputCard" value={network} onChange={(e) => setNetwork(e.target.value)}>
+                                    <option value="">Choose Network</option>
+                                    <option value="MTN">MTN</option>
+                                    <option value="Vodafone">Vodafone</option>
+                                    <option value="AirtelTigo">AirtelTigo</option>
+                                </select>
                             </div>
 
                             <div className="form-floating mb-3">
