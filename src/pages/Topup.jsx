@@ -5,6 +5,8 @@ import Sidebar from '../components/Sidebar';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import {Link} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'; // Import useHistory from React Router
+
 
 function Topup() {
     const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
@@ -65,11 +67,18 @@ function Topup() {
       
           // Handle the API response as needed
           console.log('Payment Successful:', responseData);
-      
+
+        //   if (!responseData.status) {
+            console.log(responseData.status)
+        //   }
+          
+          // Use history.push() to navigate to /success
+            // history.push('/success');
         //   // Optionally, clear the input fields after sending
           // setSenderName('');
           // setPhoneNumber('');
           // setTextContent('');
+
         } catch (error) {
           // Handle errors
           console.error('Error making Payment:', error);
