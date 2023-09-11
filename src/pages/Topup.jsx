@@ -34,7 +34,7 @@ function Topup() {
         console.log('Amount:', amount);
     
         // Define the API URL
-        const apiUrl = 'https://prestoghana.com';
+        const apiUrl = 'https://prestoghana.com/externalsms/topup';
         const sandboxUrl = 'http://192.168.0.111:5000/externalsms/topup';
     
         // Create the data object with the required parameters
@@ -53,7 +53,7 @@ function Topup() {
         };
     
         // Make the POST request using fetch
-        const response = await fetch(sandboxUrl, {
+        const response = await fetch(apiUrl, {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(data),
