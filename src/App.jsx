@@ -11,6 +11,7 @@ import Csv from './pages/Csv';
 import Loader from './components/Loader';
 import Topup from './pages/Topup';
 import Success from './pages/Success';
+import BulkMessaging from './pages/BulkMessaging';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/loader" component={Loader}/>
           <Route path="/topup" component={Topup}/>
           <Route path="/success" component={Success}/>
+          <Route path="/bulksms" component={BulkMessaging}/>
         </Switch>
       </main>
     </Router>
