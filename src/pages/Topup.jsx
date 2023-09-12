@@ -21,72 +21,65 @@ function Topup() {
     const history = useHistory();
 
     const topUp = async () => {
-    try {
-        // Check if required fields are empty
-        if (!network || !phoneNumber || !amount) {
-        alert('Please fill in all fields before sending the message.');
-        return;
+        try {
+          // Check if required fields are empty
+          if (!network || !phoneNumber || !amount) {
+            alert('Please fill in all fields before sending the message.');
+            return;
+          }
+      
+          // Define the API URL
+          const apiUrl = 'https://prestoghana.com/externalsms/topup';
+      
+          // Create the data object with the required parameters
+          const data = {
+            "network": network,
+            "phone": phoneNumber,
+            "amount": amount,
+          };
+      
+          // Set up headers for the POST request
+          const headers = {
+            'Content-Type': 'application/json',
+            // Add any other required headers
+          };
+      
+          // Make the POST request using fetch
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(data),
+          });
+      
+          // Check if the response status is OK (200)
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+      
+          // Parse the response data as needed (assuming JSON)
+          const responseData = await response.json();
+      
+          // Handle the API response as needed
+          console.log('Payment Successful:', responseData);
+      
+          // Check the response data for specific conditions if needed
+          if (responseData.status === 'success') {
+            // Payment was successful
+            history.push('/success');
+          } else {
+            // Handle other response conditions or show an error message
+            console.error('Payment Error:', responseData.error);
+            // Display an error message to the user
+            alert('Payment failed. Please try again later.');
+          }
+      
+        } catch (error) {
+          // Handle errors
+          console.error('Error making Payment:', error);
+          // Display an error message to the user
+          alert('An error occurred while processing your request. Please try again later.');
         }
-    
-        // Debug: Log the values
-        console.log('Network:', network);
-        console.log('Phone Number:', phoneNumber);
-        console.log('Amount:', amount);
-    
-        // Define the API URL
-        const apiUrl = 'https://prestoghana.com/externalsms/topup';
-        const sandboxUrl = 'http://192.168.0.111:5000/externalsms/topup';
-    
-        // Create the data object with the required parameters
-        const data = {
-        "network": network, // Assuming senderName is used as senderId
-        "phone": phoneNumber,
-        "amount": amount,
-        };
-    
-        // Set up headers for the POST request
-        const headers = {
-        'Origin': 'http://192.168.0.114:5173',
-        'Access-Control-Allow-Origin': 'http://192.168.0.114:5173',
-        'Content-Type': 'application/json',
-        // Add any other required headers
-        };
-    
-        // Make the POST request using fetch
-        const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify(data),
-        });
-    
-        // Check if the response status is OK (200)
-        if (!response.ok) {
-        throw new Error('Network response was not ok');
-        }
-    
-        // Parse the response data as needed (assuming JSON)
-        const responseData = await response.json();
-    
-        // Handle the API response as needed
-        console.log('Payment Successful:', responseData);
-
-    //   if (!responseData.status) {
-        console.log(responseData.status)
-    //   }
-        
-        // Use history.push() to navigate to /success
-        history.push('/success');
-
-    //   // Optionally, clear the input fields after sending
-        // setSenderName('');
-        // setPhoneNumber('');
-        // setTextContent('');
-
-    } catch (error) {
-        // Handle errors
-        console.error('Error making Payment:', error);
-    }
-    };
+      };
 
   return (
     <main className='grid-container'>
@@ -109,10 +102,11 @@ function Topup() {
                             <h1 className="heading" style={{ textAlign: 'center', marginTop: '1vh' }}><b>Top-up account balance</b></h1>
                             <h6 className='text-muted' style={{ textAlign: 'center', width: '100%' }}>Kindly fill-in the form below</h6>
 
+                            
+
                             <div className="form-floating mb-3">
-                                <label htmlFor="" controlId="network">Network</label>
-                                {/* <input className="inputCard" value={network} onChange={(e) => setNetwork(e.target.value)} placeholder="Choose Network" type="text"/> */}
-                                <select className="inputCard" value={network} onChange={(e) => setNetwork(e.target.value)}>
+                                <label htmlFor="network" className="form-label">Network</label>
+                                <select id="network" className="inputCard" value={network} onChange={(e) => setNetwork(e.target.value)}>
                                     <option value="">Choose Network</option>
                                     <option value="MTN">MTN</option>
                                     <option value="Vodafone">Vodafone</option>
@@ -121,13 +115,13 @@ function Topup() {
                             </div>
 
                             <div className="form-floating mb-3">
-                                <label htmlFor="" controlId="phoneNumber">Phone Number</label>
-                                <input className="inputCard" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="02XXXXXXXX" type="number"/>
+                                <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
+                                <input id="phoneNumber" className="inputCard" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="02XXXXXXXX" type="number" />
                             </div>
 
                             <div className="form-floating mb-3">
-                                <label htmlFor="" controlId="amount">Amount</label>
-                                <input className="inputCard" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Amount" type="number"/>
+                                <label htmlFor="amount" className="form-label">Amount</label>
+                                <input id="amount" className="inputCard" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Amount" type="number" />
                             </div>
 
 

@@ -122,32 +122,46 @@ function SendSms() {
                     </div>
                     </div>
 
-                    <div style={{marginTop: '8vh', paddingBottom: '4vh'}}>
-                    <FloatingLabel controlId="phoneNumber" label="Phone Number" style={{ color: 'black' }} className="mb-3">
-                        <Form.Control type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-                    </FloatingLabel>
+                    <div style={{marginTop: '4vh', paddingBottom: '4vh'}}>
 
-                    <FloatingLabel controlId="senderName" label="Sender's ID" style={{ color: 'black' }} className="mb-3">
-                        <Form.Control type="text" value={senderName} onChange={handleSenderNameChange} />
-                    </FloatingLabel>
+                      <div className="form-floating mb-3">
+                        <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
+                        <input id="phoneNumber" className="inputCard" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="02XXXXXXXX" type="number" />
+                      </div>
+                      {/* <FloatingLabel controlId="phoneNumber" label="Phone Number" style={{ color: 'black' }} className="mb-3">
+                          <Form.Control type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+                      </FloatingLabel> */}
 
-                    <FloatingLabel controlId="textContent" label="Enter your SMS text here" style={{ color: 'black' }}>
-                        <Form.Control as="textarea" value={textContent} onChange={handleTextareaChange} style={{ height: '100px' }} />
-                    </FloatingLabel>
+                      {/* <FloatingLabel controlId="senderName" label="Sender's ID" style={{ color: 'black' }} className="mb-3">
+                          <Form.Control type="text" value={senderName} onChange={handleSenderNameChange} />
+                      </FloatingLabel> */}
+                      <div className="form-floating mb-3">
+                        <label htmlFor="senderName" className="form-label">Sender's ID</label>
+                        <input id="senderName" className="inputCard" value={senderName} onChange={handleSenderNameChange} placeholder="Enter Sender Id" type="text" />
+                      </div>
 
-                    {/* <Form>
-                        
-                        <Form.Group controlId="textContent">
-                        <Form.Label>Enter your SMS text here</Form.Label>
-                        <Form.Control
-                            as="textarea"
-                            rows={3}
-                            value={textContent}
-                            onChange={(e) => setTextContent(e.target.value)}
-                        />
-                        </Form.Group>
-                        
-                    </Form> */}
+                      {/* <FloatingLabel controlId="textContent" label="Enter your SMS text here" style={{ color: 'black' }}>
+                          <Form.Control as="textarea" value={textContent} onChange={handleTextareaChange} style={{ height: '100px' }} />
+                      </FloatingLabel> */}
+                      <div className="form-floating mb-3">
+                        <label htmlFor="textContent" className="form-label">Message</label>
+                        <textarea id="textContent" className=" inputCard" value={textContent} onChange={handleTextareaChange} placeholder="Enter your SMS text here" style={{ height: '100px' }} ></textarea>
+                        {/* <input id="textContent" className="inputCard" value={textContent} onChange={handleTextareaChange} placeholder="Enter your SMS text here" type="text" style={{ height: '100px'}}/> */}
+                      </div>
+
+                      {/* <Form>
+                          
+                          <Form.Group controlId="textContent">
+                          <Form.Label>Enter your SMS text here</Form.Label>
+                          <Form.Control
+                              as="textarea"
+                              rows={3}
+                              value={textContent}
+                              onChange={(e) => setTextContent(e.target.value)}
+                          />
+                          </Form.Group>
+                          
+                      </Form> */}
    
                     </div>
                 </div>
