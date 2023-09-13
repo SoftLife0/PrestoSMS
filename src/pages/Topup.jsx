@@ -12,6 +12,7 @@ function Topup() {
     const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
     const [network, setNetwork] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [senderId, setSenderId] = useState('');
     const [amount, setAmount] = useState('');   
 
     const OpenSidebar = () => {
@@ -23,19 +24,21 @@ function Topup() {
     const topUp = async () => {
         try {
           // Check if required fields are empty
-          if (!network || !phoneNumber || !amount) {
+          if (!network || !phoneNumber || !senderId || !amount) {
             alert('Please fill in all fields before sending the message.');
             return;
           }
       
           // Define the API URL
           const apiUrl = 'https://prestoghana.com/externalsms/topup';
+          const sandboxUrl = 'http://192.168.0.112:5000/externalsms/topup';
       
           // Create the data object with the required parameters
           const data = {
             "network": network,
             "phone": phoneNumber,
             "amount": amount,
+            "senderId": senderId,
           };
       
           // Set up headers for the POST request
@@ -45,7 +48,7 @@ function Topup() {
           };
       
           // Make the POST request using fetch
-          const response = await fetch(apiUrl, {
+          const response = await fetch(sandboxUrl, {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(data),
@@ -117,6 +120,11 @@ function Topup() {
                             <div className="form-floating mb-3">
                                 <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
                                 <input id="phoneNumber" className="inputCard" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="02XXXXXXXX" type="number" />
+                            </div>
+
+                            <div className="form-floating mb-3">
+                                <label htmlFor="senderId" className="form-label">Sender Id</label>
+                                <input id="senderId" className="inputCard" value={senderId} onChange={(e) => setSenderId(e.target.value)} placeholder="Sender Id" type="text" />
                             </div>
 
                             <div className="form-floating mb-3">

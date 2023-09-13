@@ -47,7 +47,7 @@ function SendSms() {
       
           // Define the API URL
           const apiUrl = 'https://prestoghana.com/externalsms';
-          const sandboxUrl = 'http://192.168.0.111:5000/externalsms';
+          const sandboxUrl = 'http://192.168.0.112:5000/externalsms';
       
           // Create the data object with the required parameters
           const data = {
@@ -65,7 +65,7 @@ function SendSms() {
           };
       
           // Make the POST request using fetch
-          const response = await fetch(apiUrl, {
+          const response = await fetch(sandboxUrl, {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(data),
@@ -83,9 +83,9 @@ function SendSms() {
           console.log('SMS sent successfully:', responseData);
       
           // Optionally, clear the input fields after sending
-          setSenderName('');
-          setPhoneNumber('');
-          setTextContent('');
+          // setSenderName('');
+          // setPhoneNumber('');
+          // setTextContent('');
         } catch (error) {
           // Handle errors
           console.error('Error sending SMS:', error);
@@ -145,7 +145,7 @@ function SendSms() {
                       </FloatingLabel> */}
                       <div className="form-floating mb-3">
                         <label htmlFor="textContent" className="form-label">Message</label>
-                        <textarea id="textContent" className=" inputCard" value={textContent} onChange={handleTextareaChange} placeholder="Enter your SMS text here" style={{ height: '100px' }} ></textarea>
+                        <textarea id="textContent" className="inputCard" value={textContent} onChange={handleTextareaChange} placeholder="Enter your SMS text here" style={{ height: '100px' }} ></textarea>
                         {/* <input id="textContent" className="inputCard" value={textContent} onChange={handleTextareaChange} placeholder="Enter your SMS text here" type="text" style={{ height: '100px'}}/> */}
                       </div>
 

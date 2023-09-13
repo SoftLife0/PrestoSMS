@@ -9,11 +9,11 @@ class ApexChart extends React.Component {
       series: [
         {
           name: 'Delivered Messages',
-          data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         },
         {
           name: 'Unsuccessful Messages',
-          data: [5, 10, 8, 15, 12, 7, 9, 18, 5],
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0],
         },
       ],
       options: {

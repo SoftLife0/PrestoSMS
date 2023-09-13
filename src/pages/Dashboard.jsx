@@ -42,7 +42,7 @@ function Dashboard() {
               </div>
               <div>
                 <h6>Total Count</h6>
-                <h4>1293</h4>
+                <h4>0</h4>
                 <Link to="/">
                 View Transactions
                 </Link>
@@ -57,7 +57,7 @@ function Dashboard() {
               </div>
               <div>
                 <h6>Total Count</h6>
-                <h4>14</h4>
+                <h4>0</h4>
                 <Link to="/">
                 View Transactions
                 </Link>
@@ -72,7 +72,7 @@ function Dashboard() {
               </div>
               <div>
                 <h6>Total Balance</h6>
-                <h4>GHC129.06</h4>
+                <h4>GHC0.00</h4>
                 <Link to="/">
                 View Transactions
                 </Link>
